@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.xllnc.beatpad.viewmodel.SoundViewModel" />
+        <variable
+            name="view"
+            type="com.xllnc.beatpad.CustomButtonView" />
+    </data>
+        <com.xllnc.beatpad.CustomButtonView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@{viewModel.color}"
+            tools:text="SoundName"
+            android:gravity="start|top"
+            android:paddingStart="4dp"
+            android:text="@{viewModel.title}"
+            android:onClick="@{()-> viewModel.onButtonClicked()}"
+            android:onLongClick="@{()->viewModel.onButtonLongClicked()}"/>
+</layout>

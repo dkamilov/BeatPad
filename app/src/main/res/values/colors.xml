@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#2e4056</color>
+    <color name="colorPrimaryDark">#2e4056</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="background_color">#2e4056</color>
+
+    <color name="clap_dark">#0083FF</color>
+    <color name="clap_light">#00DBFF</color>
+
+    <color name="crash_dark">#3fb215</color>
+    <color name="crash_light">#a3de31</color>
+
+    <color name="hihat_dark">#e8b324</color>
+    <color name="hihat_light">#f9e84b</color>
+
+    <color name="kick_dark">#ad1fa2</color>
+    <color name="kick_light">#e23bab</color>
+
+    <color name="ride_dark">#e83067</color>
+    <color name="ride_light">#f26982</color>
+
+</resources>
