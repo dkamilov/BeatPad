@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.util.Log;
+import android.view.View;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -75,6 +76,7 @@ public class BeatPad {
 
     /**
      * Запускает цикл и проверяет, находится ли звук уже в цикле, если да то останавливает цикл.
+     * int streamId нужен для того, чтобы остановить звук.
      * @param sound Объетк класса Sound
      */
     public void playLoop(Sound sound){
@@ -88,6 +90,7 @@ public class BeatPad {
             sound.setStreamId(streamId);
         }
     }
+
 
     /**
      * Отключает SoundPool

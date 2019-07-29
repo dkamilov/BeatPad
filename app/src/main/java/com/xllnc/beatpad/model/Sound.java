@@ -8,18 +8,20 @@ import com.xllnc.beatpad.R;
 
 public class Sound {
     private static final String TAG = "Sound";
+
+    private Resources mResources;
+
     private String mAssetPath;
     private String mName;
     private Integer mSoundId;
     private Integer mStreamId;
     private boolean inLoop;
-    private Resources mResources;
 
-    public Sound(String assetPath, Resources resources){
+    public Sound(String assetPath, Resources resources) {
         mAssetPath = assetPath;
         mResources = resources;
         String[] components = assetPath.split("/");
-        String fileName = components[components.length-1];
+        String fileName = components[components.length - 1];
         fileName = fileName.replace(".wav", "");
         mName = fileName.split("-")[0];
 
@@ -43,24 +45,24 @@ public class Sound {
         mSoundId = soundId;
     }
 
-    public void setStreamId(Integer streamId){
-        mStreamId = streamId;
-    }
-
-    public Integer getStreamId(){
+    public Integer getStreamId() {
         return mStreamId;
     }
 
-    public void setLoop(boolean loop){
-        inLoop = loop;
+    public void setStreamId(Integer streamId) {
+        mStreamId = streamId;
     }
 
-    public boolean inLoop(){
+    public boolean inLoop() {
         return inLoop;
     }
 
-    public Drawable getColor(){
-        switch (mName){
+    public void setLoop(boolean loop) {
+        inLoop = loop;
+    }
+
+    public Drawable getColor() {
+        switch (mName) {
             case "clap":
                 Log.i(TAG, "clap");
                 return mResources.getDrawable(R.drawable.clap_drawable_background);
@@ -83,5 +85,9 @@ public class Sound {
                 Log.i(TAG, "default");
                 return null;
         }
+    }
+
+    public Drawable getLoopIcon(){
+        return mResources.getDrawable(R.drawable.infinite_loop);
     }
 }

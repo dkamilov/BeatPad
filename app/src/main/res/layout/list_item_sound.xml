@@ -15,8 +15,10 @@
             android:layout_height="wrap_content"
             android:background="@{viewModel.color}"
             tools:text="SoundName"
+            android:drawableBottom="@{viewModel.loopIcon}"
             android:gravity="start|top"
-            android:paddingStart="4dp"
+            android:padding="4dp"
+            android:textSize="12sp"
             android:text="@{viewModel.title}"
             android:onClick="@{()-> viewModel.onButtonClicked()}"
             android:onLongClick="@{()->viewModel.onButtonLongClicked()}"/>
