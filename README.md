@@ -1,3 +1,3 @@
 # BeatPad
-![alt text](screen2.jpg)
-![alt text](screen1.jpg)
+<img src="screen1.jpg">
+<img src="screen2.jpg">
